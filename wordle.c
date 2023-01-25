@@ -84,10 +84,12 @@ int main(int argc, string argv[])
     {
         // obtain user's guess
         string guess = get_guess(wordsize);
+        printf("%s", guess);
         
 
         // array to hold guess status, initially set to zero
         int status[wordsize];
+        printf("%s", guess);
        
 
 
@@ -133,7 +135,7 @@ string get_guess(int wordsize)
     do
     {
         printf("Input a %i-letter word: ",wordsize);
-        scanf("%s", &guess);
+        gets(guess);
     } 
     while ( strlen(guess) != wordsize);
     char* pguess= guess; //this step allows to transfer local variable(i.e "guess") to main()
@@ -143,7 +145,7 @@ string get_guess(int wordsize)
 int check_word(string guess, int wordsize, int status[], string choice)
 {
     int score = 0;
-
+ 
     // compare guess to choice and score points as appropriate, storing points in status
     // TODO #5
     /*for (int g = 0; g < wordsize; g++)
@@ -172,8 +174,7 @@ int check_word(string guess, int wordsize, int status[], string choice)
         }
         
     }
-    printf("score; %i", score);*/
-
+    */
     // HINTS
     // iterate over each letter of the guess
         // iterate over each letter of the choice
